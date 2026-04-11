@@ -6,11 +6,11 @@
   "author": "João Victor Nascimento",
   "repository": {
     "type": "git",
-    "url": "https://github.com/seu-usuario/safepot.git"
+    "url": "https://github.com/JoaoVictorNascimento/safepot.git"
   },
-  "homepage": "https://github.com/seu-usuario/safepot#readme",
+  "homepage": "https://github.com/JoaoVictorNascimento/safepot#readme",
   "bugs": {
-    "url": "https://github.com/seu-usuario/safepot/issues"
+    "url": "https://github.com/JoaoVictorNascimento/safepot/issues"
   },
   "main": "dist/index.js",
   "module": "dist/index.mjs",

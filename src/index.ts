@@ -1,2 +1,8 @@
-export * from "./core/createStore";
-export * from "./react/createStoreHook";
+export { createStore } from "./core/createStore";
+export { createStoreHook } from "./react/createStoreHook";
+
+export type {
+  Store,
+  Listener,
+  StateUpdater,
+} from "./core/createStore";
