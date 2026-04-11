@@ -1,0 +1,45 @@
+{
+  "name": "safepot",
+  "version": "0.1.0",
+  "description": "A lightweight and performant state management library built on modern React principles, with optional enterprise-grade architecture",
+  "license": "MIT",
+  "author": "João Victor Nascimento",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seu-usuario/safepot.git"
+  },
+  "homepage": "https://github.com/seu-usuario/safepot#readme",
+  "bugs": {
+    "url": "https://github.com/seu-usuario/safepot/issues"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": [
+    "state-management",
+    "react",
+    "zustand",
+    "store",
+    "state",
+    "frontend",
+    "typescript"
+  ],
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "tsup": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  }
+}
