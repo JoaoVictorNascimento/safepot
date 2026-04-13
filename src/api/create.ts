@@ -1,5 +1,9 @@
-import { createStore, type Listener, type StateUpdater } from "../core/createStore";
-import { createStoreHook } from "../react/createStoreHook";
+import {
+    createStore,
+    type Listener,
+    type StateUpdater,
+  } from "../core/createStore";
+  import { createStoreHook } from "../react/createStoreHook";
   
   type CreateState<TState extends object> = (
     set: (updater: StateUpdater<TState>) => void,
@@ -8,7 +12,10 @@ import { createStoreHook } from "../react/createStoreHook";
   
   export type UseBoundStore<TState extends object> = {
     (): TState;
-    <TSelected>(selector: (state: TState) => TSelected): TSelected;
+    <TSelected>(
+      selector: (state: TState) => TSelected,
+      equalityFn?: (a: TSelected, b: TSelected) => boolean
+    ): TSelected;
     getState: () => TState;
     setState: (updater: StateUpdater<TState>) => void;
     subscribe: (listener: Listener<TState>) => () => void;
@@ -20,7 +27,6 @@ import { createStoreHook } from "../react/createStoreHook";
     const store = createStore({} as TState);
   
     const initialState = initializer(store.setState, store.getState);
-  
     store.setState(initialState);
   
     const useStore = createStoreHook(store) as UseBoundStore<TState>;

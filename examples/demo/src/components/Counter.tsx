@@ -1,10 +1,16 @@
 import { useCounterStore } from "../stores/counterStore";
+import { shallow } from "../../../../dist/index.mjs";
 
 export function Counter() {
-  const count = useCounterStore((state) => state.count);
-  const name = useCounterStore((state) => state.name);
-  const increment = useCounterStore((state) => state.increment);
-  const decrement = useCounterStore((state) => state.decrement);
+  const { count, name, increment, decrement } = useCounterStore(
+    (state) => ({
+      count: state.count,
+      name: state.name,
+      increment: state.increment,
+      decrement: state.decrement,
+    }),
+    shallow
+  );
 
   return (
     <div>
