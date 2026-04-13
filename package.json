@@ -23,7 +23,8 @@
     "build": "tsup",
     "dev": "tsup --watch",
     "clean": "rm -rf dist",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "vanilla-test": "tsx examples/demo/src/tests/vanilla-test.ts"
   },
   "keywords": [
     "state-management",
@@ -36,7 +37,9 @@
   ],
   "devDependencies": {
     "@types/react": "^19.2.14",
+    "react": "^19.2.5",
     "tsup": "^8.0.0",
+    "tsx": "^4.21.0",
     "typescript": "^5.0.0"
   },
   "peerDependencies": {

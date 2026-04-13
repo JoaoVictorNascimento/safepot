@@ -1,11 +1,17 @@
-import { createStore } from "../../../../src/core/createStore";
-import { createStoreHook } from "../../../../src/react/createStoreHook";
+import { create } from "../../../../dist/index.mjs";
 
-const counterStore = createStore({
+type CounterStore = {
+  count: number;
+  name: string;
+  increment: () => void;
+  decrement: () => void;
+};
+
+export const useCounterStore = create<CounterStore>((set) => ({
   count: 0,
   name: "Safepot",
-});
-
-export const useCounterStore = createStoreHook(counterStore);
-
-export { counterStore };
+  increment: () =>
+    set((state) => ({ count: state.count + 1 })),
+  decrement: () =>
+    set((state) => ({ count: state.count - 1 })),
+}));
