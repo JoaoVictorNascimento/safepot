@@ -1,4 +1,4 @@
-import { create } from "../../../../src";
+import { create } from "../../../../dist/index.mjs";
 
 type CounterStore = {
   count: number;
